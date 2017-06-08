@@ -1,0 +1,31 @@
+
+<template>
+<header><h1>Shopping List</h1></header>
+<section>
+    <div>
+        <label for="search">Search</label>
+        <input id="search" type="search" value.bind="searchValue">
+    </div>
+    <div>
+        <label for="todoItemInput">To do</label>
+        <input id="todoItemInput" />
+    </div>
+    <button id="addToList">Add To List</button>
+    <button id="removeItemsFromList">Remove Checked Items</button>
+    <button id="completeItems">Complete Checked Items</button>
+</section>
+    <section>
+        <ul class="list" id="master-list">
+            <li repeat.for="item of items">
+                <span class="notebookLine">
+                    <span class="notebookSelectBox">
+                        <input id="notebookCheckbox" type="checkbox" checked.two-way="item.isSelected"  >
+                        <label for="notebookCheckbox" class="notebookLine"></label>
+                    </span>
+                    <span>${item.value}</span>
+                    <span>${item.isSelected}</span>
+                </span>
+            </li>
+        </ul>
+    </section>
+</template>

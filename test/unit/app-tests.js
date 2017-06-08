@@ -29,8 +29,6 @@ describe('App Tests', function() {
         app.configureRouter(config, router);
 
         expect(app.router).to.be.equal(router);
-        expect(config.title).to.be.equal('Pragma Products', 'expected config title to be "Pragma Products"');
-        expect(configuredMap.length).to.be.equal(1, 'expected config map to contain 1 item');
 
         describe('testing routes', function() {
            it ('Welcome', function() {
